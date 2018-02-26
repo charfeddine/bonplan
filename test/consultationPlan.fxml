@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bonplan.ConsultationPlanController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="489.0" prefWidth="1007.0">
+         <children>
+            <VBox fx:id="VBoxMain" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <StackPane fx:id="Anchorstac">
+                     <children>
+                        <TableView fx:id="tableView" prefHeight="400.0" prefWidth="965.0">
+                           <columns>
+                              <TableColumn fx:id="id" prefWidth="47.466644287109375" text="id">
+                                 <cellValueFactory>
+                                    <PropertyValueFactory property="id_p" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn prefWidth="145.3333740234375" text="TypePlan">
+                                 <cellValueFactory>
+                                    <PropertyValueFactory property="TypePlan" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn prefWidth="170.39996337890625" text="libelle">
+                                 <cellValueFactory>
+                                    <PropertyValueFactory property="libelle" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn prefWidth="201.60003662109375" text="description">
+                                 <cellValueFactory>
+                                    <PropertyValueFactory property="description" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn prefWidth="151.20001220703125" text="adresse">
+                                 <cellValueFactory>
+                                    <PropertyValueFactory property="adresse" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn prefWidth="135.9998779296875" text="Ville" />
+                              <TableColumn minWidth="5.60003662109375" prefWidth="138.933349609375" text="prix">
+                                 <cellValueFactory>
+                                    <PropertyValueFactory property="prix" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                           </columns>
+                           <sortOrder>
+                              <fx:reference source="id" />
+                           </sortOrder>
+                        </TableView>
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

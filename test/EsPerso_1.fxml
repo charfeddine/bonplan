@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bonplan.EsPersoController">
+   <children>
+      <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="194.0" style="-fx-background-color: #0a0f14;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuButton mnemonicParsing="false" popupSide="RIGHT" prefHeight="38.0" prefWidth="262.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Divertissement" textFill="#f8f8f8">
+              <items>
+                <MenuItem fx:id="btn_hotel" mnemonicParsing="false" onAction="#ShowListeHotels" text="Hotel" />
+                <MenuItem fx:id="btn_parc" mnemonicParsing="false" onAction="#ShowListeParc" text="Parc Attraction" />
+              </items>
+               <StackPane.margin>
+                  <Insets bottom="100.0" />
+               </StackPane.margin>
+            </MenuButton>
+            <MenuButton layoutX="10.0" layoutY="141.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="38.0" prefWidth="262.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Gastronomie" textFill="#f8f8f8">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </MenuButton>
+            <MenuButton layoutX="10.0" layoutY="191.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="38.0" prefWidth="262.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Evenements" textFill="#f8f8f8">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+               <StackPane.margin>
+                  <Insets top="100.0" />
+               </StackPane.margin>
+            </MenuButton>
+            <MenuButton layoutX="10.0" layoutY="241.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="38.0" prefWidth="262.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Bien Etre" textFill="#f8f8f8">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+               <StackPane.margin>
+                  <Insets top="200.0" />
+               </StackPane.margin>
+            </MenuButton>
+            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Acceuil" textFill="#fcb64e">
+               <StackPane.margin>
+                  <Insets bottom="320.0" />
+               </StackPane.margin>
+            </Button>
+            <Button fx:id="esPerso" mnemonicParsing="false" onAction="#esPerso" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Espace Personnelle" textFill="#fcb64e">
+               <StackPane.margin>
+                  <Insets bottom="200.0" />
+               </StackPane.margin>
+            </Button>
+         </children>
+      </StackPane>
+      <StackPane alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="506.0" style="-fx-background-color: #cccdce;" AnchorPane.leftAnchor="194.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="deconnect" mnemonicParsing="false" onAction="#sedeConnecter" style="-fx-background-color: #9a9da0;" text="Se deconnecter">
+               <StackPane.margin>
+                  <Insets right="10.0" />
+               </StackPane.margin>
+            </Button>
+         </children>
+      </StackPane>
+      <AnchorPane fx:id="container" layoutX="232.0" layoutY="58.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="506.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="194.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+          
+                                                                                    <TabPane tabClosingPolicy="UNAVAILABLE">
+           <tabs>
+             <Tab text="Mes Infos" />
+             <Tab onSelectionChanged="#AjouterPlan" text="Ajouter un plan">
+                  <content>
+                     
+                  </content>
+                  <content>
+                     <Pane>
+                        <children>
+                           <AnchorPane id="AnchorPane" layoutX="6.0" layoutY="-4.0" prefHeight="489.0" prefWidth="1007.0">
+                              <children>
+                                 <Label layoutX="469.0" layoutY="21.0" text="Ajouter un Plan" textAlignment="CENTER" textFill="#f85b13">
+                                    <font>
+                                       <Font name="System Bold" size="18.0" />
+                                    </font>
+                                 </Label>
+                                 <Label layoutX="150.0" layoutY="108.0" text="Categorie :">
+                                    <font>
+                                       <Font name="Arial Unicode MS" size="15.0" />
+                                    </font>
+                                 </Label>
+                                 <ComboBox fx:id="cmb_categorie" layoutX="275.0" layoutY="101.0" onAction="#initializecmbcat" prefHeight="26.0" prefWidth="205.0" AnchorPane.rightAnchor="526.4" />
+                                 <Label layoutX="149.0" layoutY="167.0" text="Type :">
+                                    <font>
+                                       <Font name="Arial Unicode MS" size="15.0" />
+                                    </font>
+                                 </Label>
+                                 <ComboBox fx:id="cmb_SC" layoutX="274.0" layoutY="159.0" prefHeight="26.0" prefWidth="205.0" />
+                                 <Label layoutX="150.0" layoutY="223.0" text="Libelle : ">
+                                    <font>
+                                       <Font name="Arial Unicode MS" size="15.0" />
+                                    </font>
+                                 </Label>
+                                 <TextField fx:id="txtlib" layoutX="274.0" layoutY="214.0" prefHeight="26.0" prefWidth="207.0" />
+                                 <Label layoutX="149.0" layoutY="269.0" text="Adresse : ">
+                                    <font>
+                                       <Font name="Arial Unicode MS" size="15.0" />
+                                    </font>
+                                 </Label>
+                                 <TextField fx:id="txtadr" layoutX="276.0" layoutY="262.0" prefHeight="26.0" prefWidth="207.0" />
+                                 <Label layoutX="150.0" layoutY="318.0" text="Ville : ">
+                                    <font>
+                                       <Font name="Arial Unicode MS" size="15.0" />
+                                    </font>
+                                 </Label>
+                                 <TextField fx:id="txtville" layoutX="276.0" layoutY="315.0" prefHeight="26.0" prefWidth="207.0" />
+                                 <Separator layoutX="537.0" layoutY="94.0" orientation="VERTICAL" prefHeight="255.0" prefWidth="7.0" />
+                                 <Label layoutX="591.0" layoutY="100.0" text="Image : ">
+                                    <font>
+                                       <Font name="Arial Unicode MS" size="15.0" />
+                                    </font>
+                                 </Label>
+                                  <TextField fx:id="txtimg" layoutX="717.0" layoutY="95.0" prefHeight="26.0" prefWidth="212.0" />
+                                 
+                                 <Button fx:id="openMI" layoutX="875.0" layoutY="95.0" onAction="#openImgage" prefHeight="26.0" prefWidth="54.0" text="Ovrir" /> 
+                                 <Label layoutX="591.0" layoutY="158.0" text="Prix : ">
+                                    <font>
+                                       <Font name="Arial Unicode MS" size="15.0" />
+                                    </font>
+                                 </Label>
+                                 <TextField fx:id="txtpx" layoutX="718.0" layoutY="154.0" prefHeight="26.0" prefWidth="210.0" />
+                                 <Label layoutX="591.0" layoutY="213.0" prefHeight="20.0" prefWidth="98.0" text="Longitude :   ">
+                                    <font>
+                                       <Font name="Arial Unicode MS" size="15.0" />
+                                    </font>
+                                 </Label>
+                                 <TextField fx:id="lng" layoutX="716.0" layoutY="210.0" prefHeight="26.0" prefWidth="210.0" />
+                                 <Label layoutX="591.0" layoutY="266.0" prefHeight="22.0" prefWidth="95.0" text="Latitude :   *">
+                                    <font>
+                                       <Font name="Arial Unicode MS" size="15.0" />
+                                    </font>
+                                 </Label>
+                                 <TextField fx:id="lat" layoutX="715.0" layoutY="262.0" prefHeight="26.0" prefWidth="212.0" />
+                                 <Label layoutX="591.0" layoutY="311.0" text="Description :">
+                                    <font>
+                                       <Font name="Arial Unicode MS" size="15.0" />
+                                    </font>
+                                 </Label>
+                                 <TextArea fx:id="txtdescr" layoutX="712.0" layoutY="303.0" prefHeight="60.0" prefWidth="217.0" />
+                                 <Button fx:id="Btn_ajouter" layoutX="416.0" layoutY="408.0" mnemonicParsing="false" onAction="#OnclikEnregistrer" prefHeight="32.0" prefWidth="267.0" text="Enregistrer" />
+                              </children>
+                           </AnchorPane>
+                        </children>
+                     </Pane>
+                  </content>
+             </Tab>
+               <Tab text="Mes plans">
+                  <content>
+                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                           <VBox fx:id="VBoxMain" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="40.799999999999955" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <children>
+                                 <Label fx:id="contentheaderv0" text="" />
+                                 <StackPane fx:id="Anchorstac">
+                                    <children>
+                                       <TableView fx:id="tableView" onMouseClicked="#klikTableData" prefHeight="400.0" prefWidth="965.0">
+                                          <columns>
+                                             <TableColumn fx:id="id" prefWidth="47.466644287109375" text="id">
+                                                <cellValueFactory>
+                                                   <PropertyValueFactory property="id_p" />
+                                                </cellValueFactory>
+                                             </TableColumn>
+                                             <TableColumn prefWidth="145.3333740234375" text="TypePlan">
+                                                <cellValueFactory>
+                                                   <PropertyValueFactory property="TypePlan" />
+                                                </cellValueFactory>
+                                             </TableColumn>
+                                             <TableColumn prefWidth="170.39996337890625" text="libelle">
+                                                <cellValueFactory>
+                                                   <PropertyValueFactory property="libelle" />
+                                                </cellValueFactory>
+                                             </TableColumn>
+                                             <TableColumn prefWidth="201.60003662109375" text="description">
+                                                <cellValueFactory>
+                                                   <PropertyValueFactory property="description" />
+                                                </cellValueFactory>
+                                             </TableColumn>
+                                             <TableColumn prefWidth="151.20001220703125" text="adresse">
+                                                <cellValueFactory>
+                                                   <PropertyValueFactory property="adresse" />
+                                                </cellValueFactory>
+                                             </TableColumn>
+                                             <TableColumn prefWidth="135.9998779296875" text="Ville" />
+                                             <TableColumn minWidth="5.60003662109375" prefWidth="138.933349609375" text="prix">
+                                                <cellValueFactory>
+                                                   <PropertyValueFactory property="prix" />
+                                                </cellValueFactory>
+                                             </TableColumn>
+                                          </columns>
+                                          <sortOrder>
+                                             <fx:reference source="id" />
+                                          </sortOrder>
+                                       </TableView>
+                                    </children>
+                                 </StackPane>
+                                 <Label fx:id="contentheaderv" text="" />
+                                 <HBox prefHeight="32.0" prefWidth="829.0">
+                                    <children>
+                                       <Button fx:id="buttonAdd" onAction="#addPlan" text="Ajouter">
+                                          <graphic>
+                                             <ImageView fitHeight="24" fitWidth="24" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                   <Image url="@../../../../../javafx/prototypeV3.0/src/prototypev2/pkg0/javafx_account_example.png" />
+                                                </image>
+                                             </ImageView>
+                                          </graphic>
+                                       </Button>
+                                       <Button fx:id="buttonEdit" onAction="#EditPlan" text="Modifier">
+                                          <graphic>
+                                             <ImageView fitHeight="24" fitWidth="24" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                   <Image url="@../../../../../javafx/prototypeV3.0/src/prototypev2/pkg0/javafx_account_example.png" />
+                                                </image>
+                                             </ImageView>
+                                          </graphic>
+                                       </Button>
+                                       <Label fx:id="contentheaderb1" text="" />
+                                       <Button fx:id="buttonDel" onAction="#SupprimerPlan" text="Supprimer">
+                                          <graphic>
+                                             <ImageView fitHeight="24" fitWidth="24" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                   <Image url="@../../../../../javafx/prototypeV3.0/src/prototypev2/pkg0/javafx_account_example.png" />
+                                                </image>
+                                             </ImageView>
+                                          </graphic>
+                                       </Button>
+                                       <Button fx:id="buttonRefresh" layoutX="10.0" layoutY="10.0" onAction="#RefreshPlan" text="Refresh">
+                                          <graphic>
+                                             <ImageView fitHeight="24" fitWidth="24" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                   <Image url="@../../../../../javafx/prototypeV3.0/src/prototypev2/pkg0/javafx_account_example.png" />
+                                                </image>
+                                             </ImageView>
+                                          </graphic>
+                                       </Button>
+                                    </children>
+                                    <padding>
+                                       <Insets left="200.0" />
+                                    </padding>
+                                    <VBox.margin>
+                                       <Insets />
+                                    </VBox.margin>
+                                 </HBox>
+                              </children>
+                           </VBox>
+                        </children>
+                        </AnchorPane>
+                  </content>
+               </Tab>
+               <Tab text="Mes propositions">
+                  <content>
+                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+               </Tab>
+               <Tab text="Mes evenements">
+                  <content>
+                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+               </Tab>
+               <Tab text="Mes evaluations">
+                  <content>
+                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="515.0" prefWidth="1156.0" />
+                  </content>
+               </Tab>
+               <Tab text="Mes commentaires">
+                  <content>
+                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+               </Tab>
+           </tabs>
+         </TabPane>
+         </children>
+      </AnchorPane>
+
+   </children>
+</AnchorPane>
