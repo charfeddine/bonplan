@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="Main" prefHeight="700.0" prefWidth="1000.0"
+            xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="bonplan.consultation_ImgController">
+   <children>
+      <VBox AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity">
+               <children>
+                  <Label fx:id="LblTitre" text="Plans" textAlignment="CENTER" textFill="#6b10e2" underline="true">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets bottom="20.0" />
+                     </StackPane.margin>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets right="10.0" />
+               </opaqueInsets>
+            </StackPane>
+            <ScrollPane fx:id="flowScrollPane" hbarPolicy="NEVER" prefHeight="700.0" prefWidth="1000.0">
+               <content>
+                  <TilePane id="flow" fx:id="Imgcharge" hgap="80.0" prefHeight="150.0" prefWidth="340.0" vgap="80.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </TilePane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

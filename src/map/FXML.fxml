@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1">
+   <children>
+      <VBox layoutX="158.970703125" layoutY="224.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <HBox layoutX="10.0" layoutY="10.0">
+               <children>
+                  <Label text="INFORMATION PLAN" textFill="#730bbd" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Arial Unicode MS" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="30.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label prefWidth="100.0" text="Libelle     : " HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Arial Unicode MS" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtlib" editable="false" prefWidth="200.0" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label prefWidth="100.0" text="Adresse  : ">
+                     <font>
+                        <Font name="Arial Unicode MS" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtadr" editable="false" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label prefWidth="100.0" text="Ville : ">
+                     <font>
+                        <Font name="Arial Unicode MS" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtville" editable="false" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label prefWidth="100.0" text="Prix : ">
+                     <font>
+                        <Font name="Arial Unicode MS" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtpx" editable="false" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label prefWidth="100.0" text="Description :">
+                     <font>
+                        <Font name="Arial Unicode MS" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="txtdescr" editable="false" prefHeight="100.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

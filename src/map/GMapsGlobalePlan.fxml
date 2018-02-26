@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import com.lynden.gmapsfx.GoogleMapView?> 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="map.GMapsGlobalePlanController">
+   <children>
+      <AnchorPane id="AnchorPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="VBoxMain" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <StackPane prefWidth="200.0">
+                     <children>
+                        <Label text="Liste des Plans" textAlignment="CENTER" textFill="#6b10e2" underline="true">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets right="10.0" />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </StackPane>
+                  <StackPane fx:id="Anchorstac">
+                     <children>
+                             <AnchorPane>
+               <children>
+                        <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                         
+              <children>
+        <VBox alignment="TOP_LEFT" fillWidth="false" spacing="5.0" styleClass="panel-background" stylesheets="/styles/vMenu.css">
+            <Button onAction="#Hybrid" styleClass="buttonWidth" text="Hybrid" />
+            <Button onAction="#Satelite" styleClass="buttonWidth" text="Satelite" />
+            <Button onAction="#Road" styleClass="buttonWidth" text="Road" />
+            <Button onAction="#Terrain" styleClass="buttonWidth" text="Terrain" />
+        </VBox>
+        <GoogleMapView fx:id="mapView" prefHeight="850.0" prefWidth="1500.0" />
+    </children>
+                           
+                              </HBox>
+               </children>
+            </AnchorPane>
+                        
+                     </children>
+                  </StackPane>
+          
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

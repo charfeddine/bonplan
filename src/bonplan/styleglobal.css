@@ -1,0 +1,80 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 10, 2018, 11:38:49 PM
+    Author     : a7med
+*/
+*{
+    -fx-primary: #0a0f14;
+    -fx-secondary: #f4b642;
+    -fx-primarytext: #edeff2;
+    -fx-secondarytext:  #cccdce;
+    
+}
+.root{
+    -fx-background-color: -fx-secondarytext;
+    -fx-text-fill: -fx-primarytext;
+}
+.button{
+    -fx-text-fill: -fx-primarytext;
+    
+      -fx-border-color: -fx-secondary;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-background-color: -fx-primary;
+}
+.button:hover{
+     -fx-text-fill: -fx-primary;
+      -fx-border-color: -fx-secondary;
+    -fx-background-color: -fx-secondary;
+}
+.label{
+  -fx-text-fill: -fx-primary;
+}
+
+.text-field{
+    -fx-background-color:#353c4d ;
+    -fx-text-fill: -fx-primarytext;
+    -jfx-focus-color:-fx-secondary;
+}
+.text-area .content{
+   -fx-background-color:#353c4d ;
+    -fx-text-fill: -fx-primarytext;
+    -jfx-focus-color:-fx-secondary;
+}
+.table-view{
+   -fx-background-color: transparent;
+    -fx-text-fill: -fx-primarytext;
+    -jfx-focus-color:-fx-secondary; 
+}
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+.table-view .column-header-background{
+    -fx-background-color: #191f30;
+}
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #353c4d;
+}
+.table-view .table-cell{
+    -fx-text-fill: white;
+}
+/*
+.img{
+    -fx-background-color: #ffff8D;
+}
+*/
+
+
+

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bonplan.EsPersoController">
+   <children>
+      <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="194.0" style="-fx-background-color: #0a0f14;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox>
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Acceuil" textFill="#fcb64e">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="150.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="esPerso" mnemonicParsing="false" onAction="#esPerso" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Espace Personnelle" textFill="#fcb64e">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <MenuButton fx:id="btn_div" mnemonicParsing="false" onAction="#ShowListeAllDivertissement" onMouseClicked="#ShowListeAllDivertissement" popupSide="RIGHT" prefHeight="38.0" prefWidth="262.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Divertissement" textFill="#f8f8f8">
+                    <items>
+                      <MenuItem fx:id="btn_hotel" mnemonicParsing="false" onAction="#ShowListeHotels" text="Hotel" />
+                      <MenuItem fx:id="btn_parc" mnemonicParsing="false" onAction="#ShowListeParc" text="Parc Attraction" />
+                    </items>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </MenuButton>
+                  <MenuButton mnemonicParsing="false" popupSide="RIGHT" prefHeight="38.0" prefWidth="262.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Gastronomie" textFill="#f8f8f8">
+                     <items>
+                        <MenuItem fx:id="btn_rest" mnemonicParsing="false" onAction="#ShowListeRestaurants" text="Restaurants" />
+                        <MenuItem fx:id="btn_ice" mnemonicParsing="false" onAction="#ShowListeGelaterie" text="Gelaterie" />
+                        <MenuItem fx:id="btn_cafe" mnemonicParsing="false" onAction="#ShowListeCafe" text="Café" />
+                     </items>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </MenuButton>
+                  <MenuButton mnemonicParsing="false" popupSide="RIGHT" prefHeight="38.0" prefWidth="262.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Evenements" textFill="#f8f8f8">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                     </items>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </MenuButton>
+                  <MenuButton mnemonicParsing="false" popupSide="RIGHT" prefHeight="38.0" prefWidth="262.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Bien Etre" textFill="#f8f8f8">
+                     <items>
+                        <MenuItem fx:id="btn_Coif" mnemonicParsing="false" onAction="#ShowListeCoif" text="Salle de Coiffures" />
+                        <MenuItem fx:id="btn_SpaEsth" mnemonicParsing="false" onAction="#ShowListe" text="Spa et Esthetique" />
+                        <MenuItem fx:id="btn_Ssport" mnemonicParsing="false" onAction="#ShowListeSsport" text="Salle de Sport" />
+                     </items>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </MenuButton>
+                  <Button fx:id="Validadmin" mnemonicParsing="false" onAction="#onValidadmin" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Validation Plan" textFill="#fcb64e" visible="false" />
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+      <StackPane alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="506.0" style="-fx-background-color: #cccdce;" AnchorPane.leftAnchor="194.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="TOP_RIGHT">
+               <children>
+                  <Button fx:id="maps" lineSpacing="5.0" mnemonicParsing="false" onAction="#showmaps" style="-fx-background-color: #9a9da0;" text="Maps">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="deconnect" lineSpacing="5.0" mnemonicParsing="false" onAction="#sedeConnecter" style="-fx-background-color: #9a9da0;" text="Se deconnecter" />
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+      <AnchorPane fx:id="container" layoutX="232.0" layoutY="58.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="506.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="194.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+      <ImageView fitHeight="126.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@../../../bonsplansLOGO.png" />
+         </image>
+      </ImageView>
+
+   </children>
+</AnchorPane>

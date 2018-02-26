@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bonplan.AcceuilClientController">
+   <children>
+      <StackPane prefHeight="500.0" prefWidth="194.0" style="-fx-background-color: #0a0f14;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuButton mnemonicParsing="false" popupSide="RIGHT" prefHeight="38.0" prefWidth="262.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Divertissement" textFill="#f8f8f8">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Hotel" />
+                <MenuItem mnemonicParsing="false" text="Parc d'attraction" />
+                  <MenuItem mnemonicParsing="false" text="Centre Commercial" />
+                  <MenuItem mnemonicParsing="false" text="Maison d'hotes" />
+              </items>
+               <StackPane.margin>
+                  <Insets top="150.0" />
+               </StackPane.margin>
+            </MenuButton>
+            <MenuButton layoutX="10.0" layoutY="141.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="38.0" prefWidth="262.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Gastronomie" textFill="#f8f8f8">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Restaurant" />
+                  <MenuItem mnemonicParsing="false" text="Lounge" />
+                  <MenuItem mnemonicParsing="false" text="Gelaterie" />
+               </items>
+               <StackPane.margin>
+                  <Insets top="60.0" />
+               </StackPane.margin>
+            </MenuButton>
+            <MenuButton layoutX="10.0" layoutY="191.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="38.0" prefWidth="262.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Evenements" textFill="#f8f8f8">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+               <StackPane.margin>
+                  <Insets top="240.0" />
+               </StackPane.margin>
+            </MenuButton>
+            <MenuButton layoutX="10.0" layoutY="241.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="38.0" prefWidth="262.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Bien Etre" textFill="#f8f8f8">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Sallon de Coiffure" />
+                  <MenuItem mnemonicParsing="false" text="Salle de Sport" />
+                  <MenuItem mnemonicParsing="false" text="Spa et Esthetique" />
+               </items>
+               <StackPane.margin>
+                  <Insets top="330.0" />
+               </StackPane.margin>
+            </MenuButton>
+            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Acceuil" textFill="#fcb64e">
+               <StackPane.margin>
+                  <Insets top="-120.0" />
+               </StackPane.margin>
+            </Button>
+            <Button fx:id="esPerso" layoutX="10.0" layoutY="81.0" mnemonicParsing="false" onAction="#esPerso" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: #161f28; -fx-background-radius: 0;" text="Espace Personnelle" textFill="#fcb64e">
+               <StackPane.margin>
+                  <Insets top="-30.0" />
+               </StackPane.margin>
+            </Button>
+         </children>
+      </StackPane>
+      <StackPane alignment="CENTER_RIGHT" layoutX="194.0" prefHeight="60.0" prefWidth="506.0" style="-fx-background-color: #0a0f14;" AnchorPane.leftAnchor="194.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="deconnect" mnemonicParsing="false" onAction="#sedeConnecter" style="-fx-background-color: #9a9da0;" text="Se deconnecter">
+               <StackPane.margin>
+                  <Insets right="10.0" />
+               </StackPane.margin>
+            </Button>
+         </children>
+      </StackPane>
+      <StackPane alignment="CENTER_LEFT" layoutX="194.0" layoutY="462.0" prefHeight="38.0" prefWidth="506.0" style="-fx-background-color: #0a0f14;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="194.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../mobile-phone.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </ImageView>
+            <Label text="+216 25 366 876 " textFill="#ff5500">
+               <StackPane.margin>
+                  <Insets left="50.0" />
+               </StackPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children></StackPane>
+      <ImageView fitHeight="126.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@../../../bonsplansLOGO.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

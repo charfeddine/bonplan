@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #161f28;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bonplan.InscriptionController">
+     <children>
+      <StackPane alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="1151.0" style="-fx-background-color: #cccdce;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <StackPane layoutY="462.0" prefHeight="38.0" prefWidth="1151.0" style="-fx-background-color: #cccdce;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <ImageView fitHeight="32.0" fitWidth="26.0" layoutX="200.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="50.0">
+         <image>
+            <Image url="@../left-arrow.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="Retour" layoutX="251.0" layoutY="425.0" onAction="#retour_click" prefHeight="32.0" prefWidth="219.0" style="-fx-background-color: #161f28;" text="Retour à la page précédente " textFill="#cccdce" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="100.0">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="nomC" focusColor="#ed7f10" labelFloat="true" layoutX="300.0" layoutY="117.0" prefHeight="30.0" prefWidth="219.0" promptText="Nom" unFocusColor="#cccccc">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="prenomC" focusColor="#ed7f10" labelFloat="true" layoutX="300.0" layoutY="210.0" prefHeight="30.0" prefWidth="219.0" promptText="Prénom" unFocusColor="#cccccc">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="mailC" focusColor="#ed7f10" labelFloat="true" layoutX="300.0" layoutY="303.0" prefHeight="30.0" prefWidth="219.0" promptText="E-mail" unFocusColor="#cccccc">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="usernameC" focusColor="#ed7f10" labelFloat="true" layoutX="300.0" layoutY="403.0" prefHeight="30.0" prefWidth="219.0" promptText="Username" unFocusColor="#cccccc">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="codePosC" focusColor="#ed7f10" labelFloat="true" layoutX="743.0" layoutY="303.0" prefHeight="30.0" prefWidth="225.0" promptText="Code postale" unFocusColor="#cccccc">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="addresseC" focusColor="#ed7f10" labelFloat="true" layoutX="743.0" layoutY="210.0" prefHeight="30.0" prefWidth="225.0" promptText="Adresse" unFocusColor="#cccccc">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="telC" focusColor="#ed7f10" labelFloat="true" layoutX="743.0" layoutY="117.0" prefHeight="30.0" prefWidth="225.0" promptText="Téléphone" unFocusColor="#cccccc">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXCheckBox fx:id="homme" layoutX="743.0" layoutY="403.0" onAction="#hommeSel" prefHeight="51.0" prefWidth="135.0" text="Homme">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXCheckBox fx:id="femme" layoutX="882.0" layoutY="403.0" onAction="#femmeSel" prefHeight="51.0" prefWidth="160.0" text="Femme">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXCheckBox>
+      <DatePicker layoutX="743.0" layoutY="361.0" prefHeight="38.0" prefWidth="219.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="187.0" />
+      <JFXButton fx:id="valider" layoutX="612.0" layoutY="365.0" onAction="#valider_click" prefHeight="38.0" prefWidth="160.0" style="-fx-background-color: #cccdce;" text="Valider" textFill="#0a0f14" AnchorPane.bottomAnchor="65.0" AnchorPane.rightAnchor="40.0">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="51.0" fitWidth="60.0" layoutX="210.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../users.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="51.0" fitWidth="60.0" layoutX="210.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../users.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="51.0" fitWidth="60.0" layoutX="210.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../email.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="51.0" fitWidth="60.0" layoutX="210.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../users.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="51.0" fitWidth="60.0" layoutX="210.0" layoutY="496.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="510.0">
+         <image>
+            <Image url="@../padlock.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="51.0" fitWidth="60.0" layoutX="675.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../envelope.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="51.0" fitWidth="60.0" layoutX="675.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../mobile-phone.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="51.0" fitWidth="60.0" layoutX="675.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../phone-number.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="msg" layoutX="701.0" layoutY="547.0" prefHeight="38.0" prefWidth="282.0" textFill="#c6780b">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <JFXPasswordField fx:id="mdpC" focusColor="#ed7f10" labelFloat="true" layoutX="300.0" layoutY="510.0" prefHeight="51.0" prefWidth="232.0" promptText="Mot de passe" unFocusColor="#cccccc">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXPasswordField>
+      
+   </children>
+</AnchorPane>
